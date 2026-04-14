@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# WordPress / Local dev
+wp-config.php
+*.log
+
+# Composer
+vendor/
+composer.lock
+
+# Node / build tools (none used, but just in case)
+node_modules/
+package-lock.json
+yarn.lock
+dist/
