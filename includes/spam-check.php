@@ -2,7 +2,7 @@
 /**
  * Spam detection — check if any honeypot field was filled.
  *
- * @package CF7_Honeypot_Lite
+ * @package Web_Ok_Honeypot_Lite_For_CF7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,11 +31,12 @@ function cf7hl_check_spam( $spam, $submission ) {
 	$tags = $contact_form->scan_form_tags( [ 'type' => 'honeypot' ] );
 
 	foreach ( $tags as $tag ) {
-		$value = isset( $_POST[ $tag->name ] ) ? $_POST[ $tag->name ] : '';
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified upstream by CF7 before this filter runs.
+		$value = isset( $_POST[ $tag->name ] ) ? sanitize_text_field( wp_unslash( $_POST[ $tag->name ] ) ) : '';
 
 		if ( '' !== $value ) {
 			$submission->add_spam_log( [
-				'agent'  => 'cf7-honeypot-lite',
+				'agent'  => 'web-ok-honeypot-lite-for-cf7',
 				'reason' => sprintf(
 					'Honeypot field "%s" was filled.',
 					$tag->name
@@ -72,7 +73,7 @@ function cf7hl_maybe_fake_success( $response, $result ) {
 	$our_catch = false;
 
 	foreach ( $spam_log as $entry ) {
-		if ( isset( $entry['agent'] ) && 'cf7-honeypot-lite' === $entry['agent'] ) {
+		if ( isset( $entry['agent'] ) && 'web-ok-honeypot-lite-for-cf7' === $entry['agent'] ) {
 			$our_catch = true;
 			break;
 		}
@@ -87,7 +88,7 @@ function cf7hl_maybe_fake_success( $response, $result ) {
 	$response['status']  = 'mail_sent';
 	$response['message'] = $contact_form
 		? $contact_form->message( 'mail_sent_ok' )
-		: __( 'Thank you for your message. It has been sent.', 'cf7-honeypot-lite' );
+		: __( 'Thank you for your message. It has been sent.', 'web-ok-honeypot-lite-for-cf7' );
 
 	return $response;
 }

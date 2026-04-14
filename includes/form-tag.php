@@ -2,7 +2,7 @@
 /**
  * Register the [honeypot] form tag for Contact Form 7.
  *
- * @package CF7_Honeypot_Lite
+ * @package Web_Ok_Honeypot_Lite_For_CF7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

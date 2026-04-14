@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: CF7 Honeypot Lite
- * Plugin URI:  https://github.com/samuelkobe/CF7-Honeypot-Lite
+ * Plugin Name: Web Ok Honeypot Lite for CF7
+ * Plugin URI:  https://github.com/samuelkobe/Web-Ok-Honeypot-Lite-for-CF7
  * Description: Lightweight honeypot spam protection for Contact Form 7. Drop-in replacement for bloated alternatives — zero config, just add [honeypot] to your form.
  * Version:     1.0.0
  * Requires at least: 6.2
@@ -11,7 +11,7 @@
  * Author URI:  https://webok.ca/
  * License:     GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: cf7-honeypot-lite
+ * Text Domain: web-ok-honeypot-lite-for-cf7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -49,7 +49,7 @@ if ( is_admin() ) {
 // Enqueue the hiding CSS when CF7 scripts load.
 add_action( 'wpcf7_enqueue_scripts', function () {
 	wp_enqueue_style(
-		'cf7-honeypot-lite',
+		'web-ok-honeypot-lite-for-cf7',
 		CF7_HONEYPOT_LITE_URL . 'assets/css/honeypot.css',
 		[],
 		CF7_HONEYPOT_LITE_VERSION

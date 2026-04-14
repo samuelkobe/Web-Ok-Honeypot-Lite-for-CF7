@@ -1,5 +1,5 @@
 /**
- * CF7 Honeypot Lite — hide the honeypot field from human users.
+ * Web Ok Honeypot Lite for CF7 — hide the honeypot field from human users.
  *
  * Uses offscreen positioning rather than display:none or visibility:hidden,
  * because some bots are smart enough to skip fields hidden with those methods.

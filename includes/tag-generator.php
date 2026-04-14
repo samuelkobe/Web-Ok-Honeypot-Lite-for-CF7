@@ -5,7 +5,7 @@
  * Adds a "honeypot" button that lets users insert [honeypot] tags
  * without typing the shortcode manually.
  *
- * @package CF7_Honeypot_Lite
+ * @package Web_Ok_Honeypot_Lite_For_CF7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ $tag_generator = WPCF7_TagGenerator::get_instance();
 
 $tag_generator->add(
 	'honeypot',
-	__( 'honeypot', 'cf7-honeypot-lite' ),
+	__( 'honeypot', 'web-ok-honeypot-lite-for-cf7' ),
 	'cf7hl_tag_generator_honeypot',
 	[ 'version' => '2' ]
 );
@@ -38,7 +38,7 @@ function cf7hl_tag_generator_honeypot( $contact_form, $options ) {
 
 	$formatter->append_start_tag( 'h3' );
 	$formatter->append_preformatted(
-		esc_html__( 'Honeypot field form-tag generator', 'cf7-honeypot-lite' )
+		esc_html__( 'Honeypot field form-tag generator', 'web-ok-honeypot-lite-for-cf7' )
 	);
 	$formatter->end_tag( 'h3' );
 
@@ -46,7 +46,7 @@ function cf7hl_tag_generator_honeypot( $contact_form, $options ) {
 	$formatter->append_preformatted(
 		esc_html__(
 			'Generates a hidden honeypot field that catches spam bots. The field is invisible to real users but gets filled in by bots, flagging the submission as spam.',
-			'cf7-honeypot-lite'
+			'web-ok-honeypot-lite-for-cf7'
 		)
 	);
 	$formatter->end_tag( 'header' );
@@ -58,7 +58,7 @@ function cf7hl_tag_generator_honeypot( $contact_form, $options ) {
 	$formatter->call_user_func( static function () use ( $tgg ) {
 		$tgg->print( 'field_type', [
 			'select_options' => [
-				'honeypot' => __( 'Honeypot field', 'cf7-honeypot-lite' ),
+				'honeypot' => __( 'Honeypot field', 'web-ok-honeypot-lite-for-cf7' ),
 			],
 		] );
 

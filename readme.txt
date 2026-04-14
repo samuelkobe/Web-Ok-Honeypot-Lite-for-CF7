@@ -1,4 +1,4 @@
-=== CF7 Honeypot Lite ===
+=== Web Ok Honeypot Lite for CF7 ===
 Contributors: weboksolutions
 Tags: contact-form-7, honeypot, anti-spam, spam-protection
 Requires at least: 6.2
@@ -12,7 +12,7 @@ Lightweight honeypot spam protection for Contact Form 7. Zero config — just ad
 
 == Description ==
 
-CF7 Honeypot Lite adds a simple, effective honeypot field to your Contact Form 7 forms. It catches spam bots by adding a hidden field that real users never see — but bots fill it in automatically, revealing themselves as spam.
+Web Ok Honeypot Lite adds a simple, effective honeypot field to your Contact Form 7 forms. It catches spam bots by adding a hidden field that real users never see — but bots fill it in automatically, revealing themselves as spam.
 
 **Why this plugin?**
 
@@ -31,7 +31,7 @@ CF7 Honeypot Lite adds a simple, effective honeypot field to your Contact Form 7
 
 == Installation ==
 
-1. Upload the `cf7-honeypot-lite` folder to `/wp-content/plugins/`.
+1. Upload the `web-ok-honeypot-lite-for-cf7` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** menu.
 3. Edit any Contact Form 7 form and click the **honeypot** button in the toolbar, or manually add `[honeypot your-field-name]` to your form template.
 
@@ -53,7 +53,7 @@ The bot sees a fake success message ("Your message has been sent"), so it thinks
 
 = Can I switch from the "CF7 Apps" honeypot plugin? =
 
-Yes. CF7 Honeypot Lite uses the same `[honeypot]` form tag, so you can deactivate the old plugin and activate this one — no form changes needed.
+Yes. Web Ok Honeypot Lite uses the same `[honeypot]` form tag, so you can deactivate the old plugin and activate this one — no form changes needed.
 
 = Will this slow down my site? =
 

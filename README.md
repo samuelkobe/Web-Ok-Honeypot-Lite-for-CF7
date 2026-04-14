@@ -1,4 +1,4 @@
-# CF7 Honeypot Lite
+# Web Ok Honeypot Lite for CF7
 
 ### Lightweight spam protection for Contact Form 7
 
@@ -22,7 +22,7 @@ Adds a hidden honeypot field to CF7 forms that catches spam bots without CAPTCHA
 
 ## Installation
 
-1. Upload the `cf7-honeypot-lite` folder to `/wp-content/plugins/`.
+1. Upload the `web-ok-honeypot-lite-for-cf7` folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** menu.
 3. Edit any CF7 form and click the **honeypot** button in the toolbar, or manually add `[honeypot your-field-name]` to your form template.
 
@@ -58,7 +58,7 @@ Absolutely. They complement each other — honeypots catch simple bots, CAPTCHAs
 The bot receives a fake success message and no email is sent.
 
 **Can I switch from another CF7 honeypot plugin?**
-Yes. CF7 Honeypot Lite uses the same `[honeypot]` tag, so you can swap plugins without editing your forms.
+Yes. Web Ok Honeypot Lite uses the same `[honeypot]` tag, so you can swap plugins without editing your forms.
 
 **Will this slow down my site?**
 No. One small CSS file, a few lines of PHP, no JavaScript, no external requests, no database queries.
