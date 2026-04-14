@@ -49,7 +49,7 @@ Absolutely. Honeypots and CAPTCHAs complement each other — honeypots catch sim
 
 = What happens when a bot is caught? =
 
-The bot sees a fake success message ("Your message has been sent"), so it thinks the submission went through. No email is actually sent, and the submission is logged in CF7's spam log.
+The bot sees a fake success message ("Your message has been sent"), so it thinks the submission went through. No email is actually sent.
 
 = Can I switch from the "CF7 Apps" honeypot plugin? =
 

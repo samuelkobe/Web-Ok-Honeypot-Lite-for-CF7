@@ -44,8 +44,6 @@ Click the **honeypot** button above the form template textarea — it opens a ta
 [honeypot honeypot-field]
 ```
 
-You can add multiple honeypot fields to a single form if needed.
-
 ## FAQ
 
 **Do I need to configure anything?**
@@ -55,7 +53,7 @@ No. Just add the `[honeypot]` tag to your form and the plugin handles everything
 Absolutely. They complement each other — honeypots catch simple bots, CAPTCHAs catch more sophisticated ones.
 
 **What happens when a bot is caught?**
-The bot receives a fake success message. No email is sent, and the submission is logged in CF7's spam log.
+The bot receives a fake success message and no email is sent.
 
 **Can I switch from another CF7 honeypot plugin?**
 Yes. CF7 Honeypot Lite uses the same `[honeypot]` tag, so you can swap plugins without editing your forms.
